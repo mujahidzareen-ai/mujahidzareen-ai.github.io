@@ -6,16 +6,16 @@ import { ArrowUpRight, Bug, Check, Globe, ImageOff } from "lucide-react";
 export const FIVERR_PROFILE = "https://www.fiverr.com/mujahid_zareen";
 export const FIVERR_QA_GIG = "https://www.fiverr.com/mujahid_zareen/manually-test-your-website-or-mobile-app-and-report-detailed-bugs-d2b8";
 
-// Verified Fiverr artwork and portfolio entries. Replace these URLs with approved
-// local images if desired; descriptions do not imply unverified QA responsibilities.
+// Self-hosted QA service artwork and original Fiverr portfolio images.
+// Replace assets in public/images; project descriptions preserve their original scope.
 const artwork = {
-  qa: "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/506693372/original/fe6dd9eeef314b5cc185b39b1dfb9cc3a314d5b6/manually-test-your-website-or-mobile-app-and-report-detailed-bugs-d2b8.png",
+  qa: "/images/qa-service-banner.webp",
   projects: [
     {
       name: "ISK Developments",
       category: "REAL ESTATE WEBSITE",
       description: "A property website from my website design portfolio, connecting real estate listings with a clear digital presence.",
-      image: "https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto/v1/attachments/project_item/attachment/54c14676baa6dfdd441a55d4c3d12b1c-1744927685072/Picture1isk.jpg",
+      image: "/images/isk-developments.jpg",
       alt: "ISK Developments real estate website, from Mujahid’s Fiverr portfolio",
       width: 936,
       height: 536,
@@ -24,7 +24,7 @@ const artwork = {
       name: "AuditionMe",
       category: "MUSIC COLLABORATION PLATFORM",
       description: "A platform for songwriters and musicians to connect, share projects, audition, and collaborate. Featured in my Fiverr development portfolio.",
-      image: "https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto/v1/attachments/project_item/attachment/5edb29aacb4874f512b657d5e3726c0f-1759697350448/aud1.png",
+      image: "/images/auditionme.jpg",
       alt: "AuditionMe music collaboration website, from Mujahid’s Fiverr portfolio",
       width: 1884,
       height: 826,
@@ -46,7 +46,7 @@ export default function FiverrWork() {
       </div>
 
       <article className="fiverr-gig reveal">
-        <div className="fiverr-gig-art"><PortfolioImage src={artwork.qa} alt="Mujahid Zareen’s manual website and mobile app testing gig artwork on Fiverr" width={680} height={408}/><span className="fiverr-art-caption">FIVERR GIG ARTWORK / ILLUSTRATIVE INTERFACES</span></div>
+        <div className="fiverr-gig-art"><PortfolioImage src={artwork.qa} alt="Mujahid Zareen’s QA service banner for manual, API, and performance testing" width={680} height={408}/><span className="fiverr-art-caption">QA SERVICE ARTWORK / ILLUSTRATIVE INTERFACES</span></div>
         <div className="fiverr-gig-copy"><p className="eyebrow"><Bug size={16}/> SOFTWARE QUALITY ASSURANCE</p><h3>A fresh pair of eyes.<br/>Actionable bug reports.</h3><p>I manually test websites and mobile apps, checking functionality and UI/UX and documenting defects with clear reproduction steps, expected results, and supporting evidence.</p><ul>{["Website & mobile app testing", "Functional & UI/UX checks", "Clear, reproducible bug reports"].map(item=><li key={item}><Check size={16}/>{item}</li>)}</ul><a href={FIVERR_QA_GIG} target="_blank" rel="noopener noreferrer" className="button primary">View My SQA Gig <ArrowUpRight size={18}/><span className="sr-only"> (opens in a new tab)</span></a><span className="fiverr-order-note">Discuss scope and order securely through Fiverr.</span></div>
       </article>
 
